@@ -176,7 +176,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 58.297733
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0d5539fcc95b9499c888c474ef6268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0, g: 0, b: 0.023529412, a: 0}
+  newColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &141459456
 Transform:
   m_ObjectHideFlags: 0
@@ -586,7 +586,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 58.297733
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -766,7 +766,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 58.297733
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1341,7 +1341,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 101.7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1541,7 +1541,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 101.7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1656,7 +1656,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 300
   m_Range: 101.7
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
