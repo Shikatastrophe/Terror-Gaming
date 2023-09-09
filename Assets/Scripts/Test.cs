@@ -14,6 +14,10 @@ public class Test : MonoBehaviour,IInteractable
         
     }
 
+    public void Gaming()
+    {
+        Debug.Log("Gaming");
+    }
 
     public void Interact()
     {
