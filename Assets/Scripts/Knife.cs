@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Knife : MonoBehaviour, IInteractable
 {
+    public bool day1;
     public GameObject knife;
     public GameObject gamemanager;
     // Start is called before the first frame update
@@ -14,8 +15,17 @@ public class Knife : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        knife.SetActive(false);
-        gamemanager.GetComponent<GlobalVariables>().hasknife = true;
+        if(day1 == true)
+        {
+            gamemanager.GetComponent<GlobalVariables>().hasknifeday1 = true;
+            Destroy(knife);
+        }
+        else
+        {
+            gamemanager.GetComponent<GlobalVariables>().hasknifeday2 = true;
+            Destroy(knife);
+        }
+    
     }
     // Update is called once per frame
     void Update()

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GlobalVariables : MonoBehaviour
 {
-    public bool hasknife;
+    public bool hasknifeday1;
+    public bool hasknifeday2;
     public int day = 0;
     //sb == should be
     public GameObject sbactiveday1;
     public GameObject sbinactiveday1;
+    public GameObject knifeday1;
     public GameObject sbactiveday2;
+    public GameObject knifeday2;
     public GameObject sbactiveday3f1;
     public GameObject sbactiveday3f2;
     // Start is called before the first frame update
@@ -29,13 +32,29 @@ public class GlobalVariables : MonoBehaviour
         switch (day) { 
         case 0:
             sbactiveday1.SetActive(true);
-            sbinactiveday1.SetActive(true);
+            sbinactiveday1.SetActive(false);
+            if (knifeday1 != null)
+            {
+                knifeday1.SetActive(true);
+            }
             break; 
         case 1:
-            sbactiveday2.SetActive(true);
+                if (hasknifeday1)
+                {
+                    sbactiveday2.SetActive(true);
+                    if(knifeday2 != null)
+                    {
+                        knifeday2.SetActive(true);
+                    }
+                }
+                else
+                {
+                    knifeday1.SetActive(false);
+                    sbactiveday2.SetActive(true);
+                }
             break;
         case 2:
-            if(hasknife)
+            if(hasknifeday2)
                 {
                     sbactiveday1.SetActive(false);
                     sbinactiveday1.SetActive(true);
