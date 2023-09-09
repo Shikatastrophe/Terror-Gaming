@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,6 @@ public class Respawn : MonoBehaviour
     public GameObject player;
     public void respawn()
     {
-        player.transform.position = spawn.transform.position;
+        player.GetComponent<FirstPersonController>().Respawn();
     }
 }

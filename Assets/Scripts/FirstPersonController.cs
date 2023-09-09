@@ -142,6 +142,11 @@ namespace StarterAssets
 			}
 		}
 
+		public void Respawn()
+		{
+            transform.position = new Vector3(-10.38f, 0, -13.5f);
+        }
+
 		private void LateUpdate()
 		{
 			CameraRotation();
