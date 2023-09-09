@@ -45,7 +45,7 @@
                     "name": "Interact",
                     "type": "PassThrough",
                     "id": "5d9708cd-fe0b-4cdf-9406-76ebf173f0ca",
-                    "expectedControlType": "",
+                    "expectedControlType": "Key",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
