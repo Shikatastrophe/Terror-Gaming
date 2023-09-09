@@ -3,6 +3,11 @@
 using UnityEngine.InputSystem;
 #endif
 
+interface IInteractable
+{
+    public void Interact();
+}
+
 namespace StarterAssets
 {
 	[RequireComponent(typeof(CharacterController))]
@@ -64,9 +69,19 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
+		//bool for footsteps
+		private bool _isMoving;
+
+		[Header("Footsteps")]
+		public GameObject foot;
+
+		[Header("Interact Variables")]
+        public Transform interactorSource;
+        public float interactRange;
+
+
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		private PlayerInput _playerInput;
+        private PlayerInput _playerInput;
 #endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
@@ -115,11 +130,36 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Interact();
+			
+			if (_isMoving && Grounded)
+			{
+				foot.SetActive(true);
+			}
+			else
+			{
+				foot.SetActive(false);
+			}
 		}
 
 		private void LateUpdate()
 		{
 			CameraRotation();
+		}
+
+		private void Interact()
+		{
+			if (_input.interact)
+			{
+                Ray r = new Ray(interactorSource.position, interactorSource.forward);
+                if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+                    {
+                        interactObj.Interact();
+                    }
+                }
+            }
 		}
 
 		private void GroundedCheck()
@@ -160,7 +200,12 @@ namespace StarterAssets
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			if (_input.move == Vector2.zero)
+			{
+				targetSpeed = 0.0f;
+				_isMoving = false;
+			}
+			else { _isMoving = true; }
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
