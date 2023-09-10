@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 #endif
 
 interface IInteractable
@@ -144,7 +145,10 @@ namespace StarterAssets
 
 		public void Respawn()
 		{
+			Debug.Log("RespawnGaming");
+            _controller.enabled = false;
             transform.position = new Vector3(-10.38f, 0, -13.5f);
+            _controller.enabled = true;
         }
 
 		private void LateUpdate()

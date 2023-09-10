@@ -26,12 +26,6 @@ public class Test : MonoBehaviour,IInteractable
         StartCoroutine(Si());
     }
 
-    public IEnumerator No()
-    {
-        yield return new WaitForSeconds(1f);
-       
-    }
-
     public IEnumerator Si()
     {
         yield return new WaitForSeconds(1.0f);

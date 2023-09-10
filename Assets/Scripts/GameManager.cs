@@ -16,6 +16,15 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void End1()
+    {
+        SceneManager.LoadScene("End1");
+    }
+
+    public void End2()
+    {
+        SceneManager.LoadScene("End2");
+    }
 
     // Start is called before the first frame update
     void Start()

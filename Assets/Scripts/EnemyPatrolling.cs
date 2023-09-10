@@ -29,10 +29,15 @@ public class EnemyPatrolling : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, target) < 1 && canseePlayer == false)
         {
-            IterateWaypointindex();
-            UpdateDestination();
+           ResetEnemy();
 
         }
+    }
+
+    public void ResetEnemy()
+    {
+        IterateWaypointindex();
+        UpdateDestination();
     }
 
     void UpdateDestination()
