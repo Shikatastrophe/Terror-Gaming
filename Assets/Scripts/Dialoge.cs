@@ -11,6 +11,7 @@ public class Dialoge : MonoBehaviour
     public float textSpeed;
     public Button button;
     public bool isTalking;
+    public AudioSource audioSource;
 
     private int index;
 
@@ -40,6 +41,7 @@ public class Dialoge : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
+            audioSource.Play();
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }

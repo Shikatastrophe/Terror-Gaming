@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ending1 : MonoBehaviour
+public class Ending1 : MonoBehaviour, IInteractable
 {
     public Animator animator;
     //public GameObject player;

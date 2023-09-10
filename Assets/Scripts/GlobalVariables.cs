@@ -15,7 +15,7 @@ public class GlobalVariables : MonoBehaviour
     public GameObject knifeday2;
     public GameObject sbactiveday3f1;
     public GameObject sbactiveday3f2;
-    public Test test;
+    public GameObject test;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,8 @@ public class GlobalVariables : MonoBehaviour
     {
         switch (day) { 
         case 0:
-            sbactiveday1.SetActive(true);
+                test.SetActive(false);
+                sbactiveday1.SetActive(true);
             sbinactiveday1.SetActive(false);
             if (knifeday1 != null)
             {
@@ -40,7 +41,8 @@ public class GlobalVariables : MonoBehaviour
             }
             break; 
         case 1:
-                test.enabled = true;
+                sbactiveday1.SetActive (false);
+                test.SetActive (true);
                 if (hasknifeday1)
                 {
                     sbactiveday2.SetActive(true);
@@ -56,7 +58,7 @@ public class GlobalVariables : MonoBehaviour
                 }
             break;
         case 2:
-                test.enabled = false;
+                test.SetActive(false);
             if(hasknifeday2)
                 {
                     sbactiveday1.SetActive(false);
