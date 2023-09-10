@@ -8,20 +8,30 @@ public class EnemyPatrolling : MonoBehaviour
     NavMeshAgent agent;
     public Transform[] waypoints;
     int waypointIndex;
-    Vector3 target; 
+    Vector3 target;
+     
+    public bool canseePlayer;
+    public GameObject player;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        UpdateDestination();    
+        UpdateDestination();  
+        
     }
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, target) < 1)
+      if(canseePlayer==true)
         {
-            IterateWaypointindex(); 
+            target = player.transform.position;
+            agent.SetDestination(target);
+        }
+        else if (Vector3.Distance(transform.position, target) < 1 && canseePlayer == false)
+        {
+            IterateWaypointindex();
             UpdateDestination();
+
         }
     }
 
@@ -38,6 +48,8 @@ public class EnemyPatrolling : MonoBehaviour
             waypointIndex = 0;
         }
     }
+
+  
 
     //minuto 4:03 https://youtu.be/c8Nq19gkNfs?si=u00H5e9s9iG-dIp8
 }

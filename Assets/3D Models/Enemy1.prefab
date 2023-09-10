@@ -117,6 +117,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 3167352391464276868}
   - {fileID: 3167352389712892827}
+  collider: {fileID: 0}
 --- !u!1 &3167352391052928443
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +167,7 @@ GameObject:
   - component: {fileID: 3167352391077911148}
   - component: {fileID: 3167352391077911147}
   - component: {fileID: 3167352391077911136}
+  - component: {fileID: 3924678012001947379}
   m_Layer: 0
   m_Name: "Ni\xF1o"
   m_TagString: Untagged
@@ -289,6 +291,29 @@ MonoBehaviour:
   waypoints:
   - {fileID: 3167352391464276868}
   - {fileID: 3167352389712892827}
+  collider: {fileID: 0}
+--- !u!114 &3924678012001947379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167352391077911146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a321f6b1a759f34382c5a12740c4837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0
+  angle: 0
+  playerRef: {fileID: 0}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  canSeePlayer: 0
 --- !u!1 &3167352391464276867
 GameObject:
   m_ObjectHideFlags: 0
