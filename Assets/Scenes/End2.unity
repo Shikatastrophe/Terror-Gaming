@@ -996,11 +996,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1476178973}
   lines:
-  - So youve made it
-  - You escaped
-  - Now you are all alone
-  - I suppose you dont have any idea where to go next?
-  - We'll figure something out
+  - Congrats
+  - We are finally free
+  - Now
+  - Now, no one can hurt us anymore
   textSpeed: 0.15
   button: {fileID: 609716443}
   isTalking: 0

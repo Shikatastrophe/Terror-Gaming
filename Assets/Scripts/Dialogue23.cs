@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dialoge : MonoBehaviour
+public class Dialogue23 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
     public Button button;
-    public bool isTalking;
 
     private int index;
 
@@ -25,15 +24,13 @@ public class Dialoge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
-        isTalking = true;
-
     }
 
     IEnumerator TypeLine()
@@ -55,26 +52,22 @@ public class Dialoge : MonoBehaviour
         }
         else
         {
-            Application.Quit();
-            Debug.Log("salir app");
             gameObject.SetActive(false);
-            
         }
     }
 
     void taskOnClick()
     {
-
-        if (textComponent.text == lines[index])
-        {
-            NextLine();
-        }
-        else
-        {
-            StopAllCoroutines();
-            textComponent.text = lines[index];
-            
-        }
-
+        
+            if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        
     }
 }
