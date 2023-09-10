@@ -12,6 +12,8 @@ public class Dialoge : MonoBehaviour
     public Button button;
     public bool isTalking;
     public AudioSource audioSource;
+    public GameObject dialogueboxfull;
+    public GameObject endBox;
 
     private int index;
 
@@ -57,11 +59,19 @@ public class Dialoge : MonoBehaviour
         }
         else
         {
-            Application.Quit();
-            Debug.Log("salir app");
-            gameObject.SetActive(false);
+            dialogueboxfull.SetActive(false);
+            endBox.SetActive(true);
+            StartCoroutine(QuitGame());
+            //gameObject.SetActive(false);
             
         }
+    }
+
+    public IEnumerator QuitGame()
+    {
+        yield return new WaitForSeconds(10f);
+        Debug.Log("salir app");
+        Application.Quit();
     }
 
     void taskOnClick()
