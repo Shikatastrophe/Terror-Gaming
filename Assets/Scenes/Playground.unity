@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.06
+  m_FogDensity: 0.04
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.9386859, g: 0.90466136, b: 0.84687346, a: 1}
@@ -3006,7 +3006,7 @@ PrefabInstance:
     - target: {fileID: 4959141179988829557, guid: 248ecd0c008c8e44e8dcdb8bfc94cede,
         type: 3}
       propertyPath: functionName
-      value: dialogue10
+      value: dialogue11
       objectReference: {fileID: 0}
     - target: {fileID: 4959141179988829559, guid: 248ecd0c008c8e44e8dcdb8bfc94cede,
         type: 3}
@@ -6802,7 +6802,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 53c92fda268df4b4198c8c1397f8e2a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53c92fda268df4b4198c8c1397f8e2a4, type: 3}
@@ -16680,7 +16680,7 @@ PrefabInstance:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: interactRange
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}

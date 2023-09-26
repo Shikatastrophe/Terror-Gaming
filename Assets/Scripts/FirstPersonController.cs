@@ -141,6 +141,15 @@ namespace StarterAssets
 			{
 				foot.SetActive(false);
 			}
+			Ray r = new Ray(interactorSource.position, interactorSource.forward);
+                if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange))
+                {
+                    if (hitInfo.collider.gameObject.TryGetComponent(out Outline interactObj))
+                    {
+                        interactObj.enabled = true;
+                    }
+                }
+
 		}
 
 		public void Respawn()

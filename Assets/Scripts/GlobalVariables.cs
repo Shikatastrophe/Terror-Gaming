@@ -12,6 +12,7 @@ public class GlobalVariables : MonoBehaviour
     public GameObject sbinactiveday1;
     public GameObject knifeday1;
     public GameObject sbactiveday2;
+    public Outline outlinebed;
     public GameObject knifeday2;
     public GameObject sbactiveday3f1;
     public GameObject sbactiveday3f2;
@@ -43,6 +44,7 @@ public class GlobalVariables : MonoBehaviour
         case 1:
                 sbactiveday1.SetActive (false);
                 test.SetActive (true);
+                outlinebed.enabled = true;
                 if (hasknifeday1)
                 {
                     sbactiveday2.SetActive(true);
@@ -58,6 +60,7 @@ public class GlobalVariables : MonoBehaviour
                 }
             break;
         case 2:
+                outlinebed.enabled = false;
                 test.SetActive(false);
             if(hasknifeday2)
                 {
